@@ -1,24 +1,21 @@
 # name: service-complete
-# key: service
+# key: ``
 # contributor : mcenturion
 # group: service
+# condition : (looking-back "service\s+\{[^\}]*")
 # --
-service { '${1:name}':
-  name       => $2,
-  ensure     => ${3:$$(yas-choose-value '("stopped" "running" "false" "true"))},
-  binary     => $4,
-  control    => $5,
-  enable     => ${6:$$(yas-choose-value '("true" "false" "manual" "mask"))},
-  flags      => $7,
-  hasrestart => $8,
-  hasstatus  => $9,
-  manifest   => $10,
-  path       => $11,
-  pattern    => $12,
-  provider   => ${13:$$(yas-choose-value '("base" "bsd" "daemontools" "debian" "freebsd" "gentoo" "init" "launchd" "openbsd" "openrc" "openwrt" "rcng" "redhat" "runit" "service" "smf" "src" "systemd" "upstart" "windows"))},
-  restart    => $14,
-  start      => $15,
-  status     => $16,
-  stop       => $17,
-  timeout    => $18,
-}
+name       => $2,
+binary     => $4,
+control    => $5,
+flags      => $7,
+hasrestart => $8,
+hasstatus  => $9,
+manifest   => $10,
+path       => $11,
+pattern    => $12,
+provider   => ${13:$$(yas-choose-value '("base" "bsd" "daemontools" "debian" "freebsd" "gentoo" "init" "launchd" "openbsd" "openrc" "openwrt" "rcng" "redhat" "runit" "service" "smf" "src" "systemd" "upstart" "windows"))},
+restart    => $14,
+start      => $15,
+status     => $16,
+stop       => $17,
+timeout    => $18,

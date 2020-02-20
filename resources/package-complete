@@ -1,29 +1,27 @@
 # name: package-complete
-# key: package
+# key: ``
 # contributor : mcenturion
 # group : package
+# condition : (looking-back "package\s+\{[^\}]*")
 # --
-package { '${1:name}':
-  command              => $2,
-  name                 => $3,
-  provider             => ${4:$$(yas-choose-value '("aix" "appdmg" "apple" "apt" "aptitude" "aptrpm" "blastwave" "dnf" "dpkg" "fink" "freebsd" "gem" "hpux" "macports" "nim" "openbsd" "opkg" "pacman" "pip3" "pip" "pkg" "pkgdmg" "pkgin" "pkgng" "pkgutil" "portage" "ports" "portupgrade" "puppet_gem" "rpm" "rug" "sun" "sunfreeware" "tdnf" "up2date" "urpmi" "windows" "yum" "zypper"))},
-  ensure               => ${5:$$(yas-choose-value '("present" "absent" "purged" "held" "installed" "latest" "/./"))},
-  adminfile            => $6,
-  allow_virtual        => $7,
-  allowcdrom           => $8,
-  category             => $9,
-  configfiles          => ${10:$$(yas-choose-value '("keep" "replace"))},
-  description          => $11,
-  flavor               => $12,
-  install_options      => $13,
-  instance             => $14,
-  package_settings     => $15,
-  platform             => $16,
-  reinstall_on_refresh => $17,
-  responsefile         => $18,
-  root                 => $19,
-  source               => $20,
-  status               => $21,
-  uninstall_options    => $22,
-  vendor               => $23,
-}
+command              => $2,
+name                 => $3,
+provider             => ${4:$$(yas-choose-value '("aix" "appdmg" "apple" "apt" "aptitude" "aptrpm" "blastwave" "dnf" "dpkg" "fink" "freebsd" "gem" "hpux" "macports" "nim" "openbsd" "opkg" "pacman" "pip3" "pip" "pkg" "pkgdmg" "pkgin" "pkgng" "pkgutil" "portage" "ports" "portupgrade" "puppet_gem" "rpm" "rug" "sun" "sunfreeware" "tdnf" "up2date" "urpmi" "windows" "yum" "zypper"))},
+adminfile            => $6,
+allow_virtual        => $7,
+allowcdrom           => $8,
+category             => $9,
+configfiles          => ${10:$$(yas-choose-value '("keep" "replace"))},
+description          => $11,
+flavor               => $12,
+install_options      => $13,
+instance             => $14,
+package_settings     => $15,
+platform             => $16,
+reinstall_on_refresh => $17,
+responsefile         => $18,
+root                 => $19,
+source               => $20,
+status               => $21,
+uninstall_options    => $22,
+vendor               => $23,
