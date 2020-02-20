@@ -3,5 +3,5 @@
 # contributor : mcenturion
 # --
 package {'${1:name}':
-  ensure => ${2:$$(yas-choose-value '("present" "absent"))},
+  ensure => ${2:\$$(yas-choose-value '("present" "absent" "purged" "held" "installed" "latest" "/./"))},
 }
