@@ -1,5 +1,5 @@
 # name: exec
-# key: ex
+# key: exec
 # contributor : mcenturion
 # --
 exec { '${1:name}':

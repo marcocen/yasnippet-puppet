@@ -1,5 +1,5 @@
 # name: package
-# key: pack
+# key: package
 # contributor : mcenturion
 # --
 package {'${1:name}':

@@ -1,5 +1,5 @@
 # name: file
-# key: fi
+# key: file
 # contributor : mcenturion
 # --
 file {'${1:path}':

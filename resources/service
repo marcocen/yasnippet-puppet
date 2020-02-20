@@ -1,5 +1,5 @@
 # name: service
-# key: serv
+# key: service
 # contributor : mcenturion
 # --
 service { '${1:name}':
