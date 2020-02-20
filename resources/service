@@ -1,0 +1,8 @@
+# name: service
+# key: serv
+# contributor : mcenturion
+# --
+service { '${1:name}':
+  ensure     => ${2:$$(yas-choose-value '("stopped" "running" "false" "true"))},
+  enable     => ${3:$$(yas-choose-value '("true" "false" "manual" "mask"))},
+}

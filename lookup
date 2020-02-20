@@ -1,0 +1,5 @@
+# name: lookup
+# key: lookup
+# contributor : mcenturion
+# --
+\$${1:variable} => lookup($2::$1)

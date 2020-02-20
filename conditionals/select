@@ -1,0 +1,8 @@
+# name: select
+# key: select
+# contributor : mcenturion
+# --
+\$$1 = ${2:variable} ? {
+  '${3:match}' => '${4:value}',$0
+  default => '${5:default_value}',
+}

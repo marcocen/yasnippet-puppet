@@ -1,0 +1,41 @@
+# name: file-complete
+# key: file
+# group: file
+# contributor : mcenturion
+# --
+
+file { '${1:name}':
+	path                    => $2,
+	ensure                  => ${3:$$(yas-choose-value '("present" "absent" "file" "directory" "link"))},
+	backup                  => $4,
+	checksum                => ${5:$$(yas-choose-value '("md5" "md5lite" "sha224" "sha256" "sha256lite" "sha384" "sha512" "mtime" "ctime" "none"))},
+	checksum_value          => $6,
+	content                 => $7,
+	ctime                   => $8,
+	force                   => $9,
+	group                   => $10,
+	ignore                  => $11,
+	links                   => ${12:$$(yas-choose-value '("follow" "manage"))},
+	mode                    => $13,
+	mtime                   => $14,
+	owner                   => $15,
+	provider                => ${16:$$(yas-choose-value '("posix" "windows"))},
+	purge                   => $17,
+	recurse                 => ${18:$$(yas-choose-value '("true" "false" "remote"))},
+	recurselimit            => $19,
+	replace                 => $20,
+	selinux_ignore_defaults => $21,
+	selrange                => $22,
+	selrole                 => $23,
+	seltype                 => $24,
+	seluser                 => $25,
+	show_diff               => $26,
+	source                  => $27,
+	source_permissions      => ${28:$$(yas-choose-value '("use" "use_when_creating" "ignore"))},
+	sourceselect            => ${29:$$(yas-choose-value '("first" "all"))},
+	staging_location        => $30,
+	target                  => $31,
+	type                    => $32,
+	validate_cmd            => $33,
+	validate_replacement    => $34,
+}

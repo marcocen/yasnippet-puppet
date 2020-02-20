@@ -1,0 +1,14 @@
+# name: elsif
+# key: elsif
+# contributor : mcenturion
+# --
+
+if ${1:condition} {
+  $0
+}
+elsif ${2:condition2} {
+
+}
+else {
+
+}

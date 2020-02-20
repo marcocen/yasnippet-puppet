@@ -1,0 +1,13 @@
+# name: exec-complete
+# key: exec
+# contributor : mcenturion
+# group : exec
+# --
+exec { '${1:name}':
+  command => $2,
+  creates => $3,
+  cwd     => $4,
+  path    => $5,
+  unless  => $6,
+  user    => $7,
+}

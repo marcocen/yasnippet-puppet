@@ -1,0 +1,7 @@
+# name: defined-resource
+# key: define
+# contributor : mcenturion
+# --
+define ${0:name} (){
+  $0
+}

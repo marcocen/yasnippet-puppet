@@ -1,0 +1,7 @@
+# name: package
+# key: pack
+# contributor : mcenturion
+# --
+package {'${1:name}':
+  ensure => ${2:$$(yas-choose-value '("present" "absent"))},
+}

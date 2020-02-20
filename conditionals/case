@@ -1,0 +1,8 @@
+# name: case
+# key: case
+# contributor : mcenturion
+# --
+case ${1:variable} {
+  '${2:match}': {${3:value}}$0
+  default: {${4:default_value}}
+}

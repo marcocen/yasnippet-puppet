@@ -1,0 +1,12 @@
+# name: file-long
+# key: file
+# group: file
+# contributor : mcenturion
+# --
+file { '${1:path}':
+     ensure => ${2:$$(yas-choose-value '("present" "absent" "file" "directory" "link"))},
+     ${3:$$(yas-choose-value '("source" "content"))} => $4,
+     mode   => $5,
+     owner  => $6,
+     group  => $7,
+}

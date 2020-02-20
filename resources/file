@@ -1,0 +1,8 @@
+# name: file
+# key: fi
+# contributor : mcenturion
+# --
+file {'${1:path}':
+  ensure => ${2:$$(yas-choose-value '("present" "absent" "file" "directory" "link"))},
+  ${3:$$(yas-choose-value '("source" "content"))} => $4,
+}

@@ -1,0 +1,7 @@
+# name: exec
+# key: ex
+# contributor : mcenturion
+# --
+exec { '${1:name}':
+  command => $2,
+}

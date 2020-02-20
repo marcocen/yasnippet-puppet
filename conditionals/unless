@@ -1,0 +1,7 @@
+# name: unless
+# key: unless
+# contributor : mcenturion
+# --
+unless ${1:condition} {
+  $0
+}

@@ -1,0 +1,11 @@
+# name: else
+# key: else
+# contributor : mcenturion
+# --
+
+if ${1:condition} {
+  $0
+}
+else {
+  $2
+}

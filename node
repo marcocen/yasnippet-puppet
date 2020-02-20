@@ -1,0 +1,7 @@
+# name: node
+# key: node
+# contributor : mcenturion
+# --
+node /${1:node_regexp}/ {
+  $0
+}

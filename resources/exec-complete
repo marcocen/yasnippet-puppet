@@ -1,0 +1,25 @@
+# name: exec-complete
+# key: exec
+# contributor : mcenturion
+# group : exec
+# --
+exec { '${1:name}':
+  command     => $2,
+  creates     => $3,
+  cwd         => $4,
+  environment => $5,
+  group       => $6,
+  logoutput   => $7,
+  onlyif      => $8,
+  path        => $9,
+  provider    => $10,
+  refresh     => $11,
+  refreshonly => $12,
+  returns     => $13,
+  timeout     => $14,
+  tries       => $15,
+  try_sleep   => $16,
+  umask       => $17,
+  unless      => $18,
+  user        => $19,
+}
